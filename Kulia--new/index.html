@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/FavIcon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/FavIcon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/FavIcon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/FavIcon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./assets/FavIcon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./assets/FavIcon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./assets/FavIcon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/FavIcon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="./assets/FavIcon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="./assets/FavIcon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./assets/FavIcon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./assets/FavIcon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="./assets/FavIcon/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <meta name="description" content="Kulia, Argentinian food truck, located in Aalborg." />
+  <link href="assets/css/global.css" rel="stylesheet" />
+  <!-- <script src="./assets/js/index.js"></script> -->
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/index.js" defer></script>
+  <script src="https://kit.fontawesome.com/81264b6916.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+  <title>Kulia | Food Truck</title>
+</head>
+
+<body>
+  <header class="hero-img">
+    <nav class="nav-bar flex">
+      <a href="index.html"><img src="assets/pictures/kulia-logo.png" class="kulia-logo-mobile" alt="logo"></a>
+
+      <i id="mobile" class="fas fa-bars"></i>
+    </nav>
+    <nav class="flex mobile-nav">
+      <div class="flex uppercase">
+        <a href="index.html" class="underline-menu">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About us</a>
+      </div>
+
+      <div>
+        <h2 class="menu-social-h2">Get in touch with us!</h2>
+        <div class="menu-social flex">
+          <a href="https://www.facebook.com/KULIAFOODTRUCK.ARG" target="_blank"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kulia.foodtruck/" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:kuliafoodtruck@gmail.com" target="_blank"><i class="fa-brands fa-envelope"></i></a>
+          <a href="tel:+4571403140"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+    </nav>
+    <nav class="desktop-nav flex">
+      <a href="index.html"><img src="assets/pictures/kulia-logo.png" class="kulia-logo" alt="logo"></a>
+      <ul id="nav-list" class="flex">
+        <a href="index.html">
+          <li class="nav-white">Home</li>
+        </a>
+        <a href="menu.html">
+          <li class="nav-white">Menu</li>
+        </a>
+        <a href="about.html">
+          <li class="nav-white">About us</li>
+        </a>
+      </ul>
+
+      <div class="nav-social flex">
+        <a href="https://www.facebook.com/KULIAFOODTRUCK.ARG" target="_blank"><i
+            class="fa-brands fa-facebook-f nav-white"></i></a>
+        <a href="https://www.instagram.com/kulia.foodtruck/" target="_blank"><i
+            class="fa-brands fa-instagram nav-white"></i></a>
+      </div>
+    </nav>
+
+
+    <section class="introduction home-introduction grid">
+      <div class="h1-container">
+        <h1>
+          Welcome to<br />
+          <span class="uppercase">Kuliá</span>
+          Food Truck
+        </h1>
+        <img src="assets/svg/underline.svg" class="h1-line" alt="underline" />
+        <h3 class="header-teaser">
+          <span>Argentinian</span> sandwiches made by four amigos
+        </h3>
+      </div>
+      <div class="truck-palm-container">
+
+        <img src="assets/svg/truck2.svg" class="truck" alt="truck" />
+        <img src="assets/svg/palm.svg" class="palm" alt="palm" />
+      </div>
+      <div class="h4-container">
+        <h4>
+          Grab a quick bite, while </br> exploring Aalborg
+        </h4>
+        <a href="#menu"><i class="fa-solid fa-caret-down"></i></a>
+      </div>
+    </section>
+  </header>
+
+  <main class="index">
+    <section id="menu" class="menu-home flex">
+      <div class="h2-container">
+        <h2 class="uppercase">
+          <span class="tradition-h2 uppercase">Our tradition,</span><br />
+          Your flavour
+        </h2>
+      </div>
+
+      <p class="text-align">Argentinian cuisine with a Danish twist</p>
+      <p class="menu-teaser">
+        We created and adjusted these meals in the kitchen of our home
+        when we were thinking to open a truck. These dishes represent us.
+        We want to show you how we approach life in Argentina.
+      </p>
+
+      <div class="items grid">
+        <a href="menu.html"><img src="assets/pictures/vege-sandwich.png" class="teaser-vegan" alt="vege" /></a>
+        <a href="menu.html"><img src="assets/pictures/crispy-chicken.png" class="teaser-chicken" alt="crispy chicken" /></a>
+        <a href="menu.html"><img src="assets/pictures/cuban-sandwich.png" class="teaser-fries" alt="fries" /></a>
+      </div>
+      <h4 class="text-align">Are you hungry, already?</h4>
+      <a class="btn" href="menu.html">Check our menu</a>
+    </section>
+
+    <svg class="wave-transition" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(241, 225, 209, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(241, 225, 209, 0)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,96L80,96C160,96,320,96,480,116C640,136,800,176,960,160C1120,144,1280,72,1440,68C1600,64,1760,128,1920,164C2080,200,2240,208,2400,192C2560,176,2720,136,2880,132C3040,128,3200,160,3360,164C3520,168,3680,144,3840,120C4000,96,4160,72,4320,84C4480,96,4640,144,4800,152C4960,160,5120,128,5280,112C5440,96,5600,96,5760,80C5920,64,6080,32,6240,32C6400,32,6560,64,6720,96C6880,128,7040,160,7200,164C7360,168,7520,144,7680,112C7840,80,8000,40,8160,56C8320,72,8480,144,8640,168C8800,192,8960,168,9120,148C9280,128,9440,112,9600,88C9760,64,9920,32,10080,16C10240,0,10400,0,10560,12C10720,24,10880,48,11040,60C11200,72,11360,72,11440,72L11520,72L11520,240L11440,240C11360,240,11200,240,11040,240C10880,240,10720,240,10560,240C10400,240,10240,240,10080,240C9920,240,9760,240,9600,240C9440,240,9280,240,9120,240C8960,240,8800,240,8640,240C8480,240,8320,240,8160,240C8000,240,7840,240,7680,240C7520,240,7360,240,7200,240C7040,240,6880,240,6720,240C6560,240,6400,240,6240,240C6080,240,5920,240,5760,240C5600,240,5440,240,5280,240C5120,240,4960,240,4800,240C4640,240,4480,240,4320,240C4160,240,4000,240,3840,240C3680,240,3520,240,3360,240C3200,240,3040,240,2880,240C2720,240,2560,240,2400,240C2240,240,2080,240,1920,240C1760,240,1600,240,1440,240C1280,240,1120,240,960,240C800,240,640,240,480,240C320,240,160,240,80,240L0,240Z">
+      </path>
+      <defs>
+        <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(255, 255, 255, 0)" offset="0%"></stop>
+          <stop stop-color="rgba(241, 225, 209, 0.21176470588235294)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+        d="M0,120L80,116C160,112,320,104,480,84C640,64,800,32,960,28C1120,24,1280,48,1440,84C1600,120,1760,168,1920,188C2080,208,2240,200,2400,168C2560,136,2720,80,2880,52C3040,24,3200,24,3360,48C3520,72,3680,120,3840,140C4000,160,4160,152,4320,128C4480,104,4640,64,4800,52C4960,40,5120,56,5280,60C5440,64,5600,56,5760,80C5920,104,6080,160,6240,152C6400,144,6560,72,6720,36C6880,0,7040,0,7200,36C7360,72,7520,144,7680,172C7840,200,8000,184,8160,168C8320,152,8480,136,8640,124C8800,112,8960,104,9120,84C9280,64,9440,32,9600,32C9760,32,9920,64,10080,92C10240,120,10400,144,10560,156C10720,168,10880,168,11040,144C11200,120,11360,72,11440,48L11520,24L11520,240L11440,240C11360,240,11200,240,11040,240C10880,240,10720,240,10560,240C10400,240,10240,240,10080,240C9920,240,9760,240,9600,240C9440,240,9280,240,9120,240C8960,240,8800,240,8640,240C8480,240,8320,240,8160,240C8000,240,7840,240,7680,240C7520,240,7360,240,7200,240C7040,240,6880,240,6720,240C6560,240,6400,240,6240,240C6080,240,5920,240,5760,240C5600,240,5440,240,5280,240C5120,240,4960,240,4800,240C4640,240,4480,240,4320,240C4160,240,4000,240,3840,240C3680,240,3520,240,3360,240C3200,240,3040,240,2880,240C2720,240,2560,240,2400,240C2240,240,2080,240,1920,240C1760,240,1600,240,1440,240C1280,240,1120,240,960,240C800,240,640,240,480,240C320,240,160,240,80,240L0,240Z">
+      </path>
+    </svg>
+
+    <section class="events-section flex">
+      <h2 class="text-align uppercase">Upcoming <span>events</span></h2>
+      <div class="text-align">
+        <p>For the hunger you didn't think you had, we'll be there!</p>
+      </div>
+
+      <div class="container flex">
+      </div>
+
+    </section>
+  </main>
+
+  <!-- <svg class="waves-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D322D" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,256C384,256,480,224,576,224C672,224,768,256,864,272C960,288,1056,288,1152,288C1248,288,1344,288,1392,288L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+  <footer class="grid">
+
+    <div class="opening-hours flex">
+      <div id="opening" class="flex">
+        <h4 class="uppercase">Opening hours</h4>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <address class="flex">
+      <h4 class="uppercase">Contact us:</h4>
+
+      <a href="mailto:kuliafoodtruck@gmail.com" target="_blank" class="flex contact-icon">
+        <i class="fa-solid fa-envelope"></i>
+        <p>kuliafoodtruck@gmail.com</p>
+      </a>
+
+      <a href="tel:+4571403140" target="_blank" class="flex contact-icon">
+        <i class="fa-solid fa-phone"></i>
+        <p>+45 71 40 31 40</p>
+      </a>
+
+      <a href="https://goo.gl/maps/oy89tRMhXk6i9CmV6" target="_blank" class="flex contact-icon">
+        <i class="fa-thin fa-map-pin"></i>
+        <p>Come for a bite!</p>
+      </a>
+
+      <a href="https://www.facebook.com/KULIAFOODTRUCK.ARG" target="_blank" class="flex contact-icon">
+        <i class="fa-brands fa-facebook-f"></i>
+        <p>kulia.foodtruck</p>
+      </a>
+
+      <a href="https://www.instagram.com/kulia.foodtruck/" target="_blank" class="flex contact-icon">
+        <i class="fa-brands fa-instagram"></i>
+        <p>kulia.foodtruck</p>
+      </a>
+    </address>
+
+    <span>&copy; Kulia Foodtruck</span>
+  </footer>
+  <!-- JavaSricpt file -->
+
+
+</body>
+
+</html>

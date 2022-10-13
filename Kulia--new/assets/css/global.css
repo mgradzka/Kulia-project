@@ -1,0 +1,1943 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+a {
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* font sizes */
+h1 {
+  font-size: 9vw;
+  color: var(--dark-brown);
+  font-weight: 600;
+}
+
+h1 span {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 7vw;
+  font-weight: 600;
+}
+
+h3,
+h5 {
+  font-size: 5vw;
+}
+
+h4 {
+  font-size: 5.5vw;
+}
+
+p {
+  font-size: 4vw;
+}
+
+li {
+  font-size: 4vw;
+}
+
+h1 span {
+  font-weight: 700;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+.introduction2 p span {
+  font-family: "Quicksand", sans-serif;
+  color: var(--beige);
+}
+
+.menu-page h5,
+.rest-menu-container h5,
+.menu-page h2,
+.rest-menu-container h2 {
+  color: var(--light-brown);
+}
+
+.menu-page h4,
+.rest-menu-container h4 {
+  color: var(--dark-brown);
+}
+
+/* sections paddings */
+section,
+footer {
+  padding: 5vh 5vw;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+.menu-page h5 {
+  color: var(--light-brown);
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+}
+
+:root {
+  --orange: #d8a68a;
+  --beige: #f1e1d1;
+  --cards-beige: #f7ede3;
+  --dark-brown: #3d322d;
+  --light-brown: rgb(154, 120, 106);
+  --light-blue: #5fb6c7;
+  --btn-blue: #93dbe9;
+  --light-dark: #87807d;
+}
+
+/* ******************************** */
+/* FUNCTIONAL CLASSES */
+
+.flex {
+  display: flex;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  background-color: var(--beige);
+}
+
+.btn {
+  background-color: var(--light-blue);
+  color: white;
+  padding: 3vw 6vw;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4vw;
+  width: fit-content;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  align-self: center;
+}
+
+.underline {
+  width: 42vw;
+  margin-left: 25vw;
+  margin-bottom: 1vh;
+}
+
+i {
+  font-family: fontawesome;
+  font-style: normal;
+}
+
+.fa-caret-down {
+  color: var(--btn-blue);
+  width: 20vw;
+  text-shadow: grey 2px 5px 10px;
+}
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 110;
+  background-color: var(--dark-brown);
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 3vw 1vw 3vw;
+}
+
+.desktop-nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* nav */
+
+/* Navigation */
+.mobile-nav {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-brown);
+  flex-direction: column;
+  text-align: center;
+  padding-top: 35vw;
+  row-gap: 35vw;
+  transform: translateX(-150vw);
+  z-index: 101;
+  transition: transform 0.25s ease-in-out;
+  -webkit-transition: transform 0.25s ease-in-out;
+  -moz-transition: transform 0.25s ease-in-out;
+  -ms-transition: transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out;
+  -webkit-transform: translateX(-150vw);
+  -moz-transform: translateX(-150vw);
+  -ms-transform: translateX(-150vw);
+  -o-transform: translateX(-150vw);
+}
+
+.opened .mobile-nav {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+#mobile {
+  font-size: 11vw;
+  color: white;
+}
+
+.kulia-logo-mobile {
+  width: 14vw;
+}
+
+/* List item on the navigaton */
+.mobile-nav > div {
+  flex-direction: column;
+  row-gap: 5vw;
+}
+
+.mobile-nav > div > a {
+  text-decoration: none;
+  color: white;
+  font-size: 10vw;
+  font-weight: 700;
+}
+
+.menu-social {
+  justify-content: center;
+  column-gap: 10vw;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  margin: 0 5vw;
+}
+
+.menu-social > a {
+  color: white;
+  padding: 3vw 0;
+}
+
+.menu-social > a > i {
+  font-size: 15vw;
+}
+
+.menu-social-h2 {
+  color: white;
+  text-align: center;
+  font-size: 10vw;
+  font-weight: 400;
+}
+
+.hero-img {
+  display: block;
+}
+
+.header-teaser {
+  display: none;
+}
+
+.introduction {
+  background-image: url(../svg/blank-hero.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.home-introduction {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-content: center;
+  row-gap: 4vw;
+}
+
+.h1-container {
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.truck-palm-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  align-items: end;
+}
+
+.truck {
+  grid-column-start: 1;
+  grid-row: 1;
+  width: 55vw;
+  transform: translateX(-150vw);
+  z-index: 100;
+  -webkit-transform: translateX(-150vw);
+  -moz-transform: translateX(-150vw);
+  -ms-transform: translateX(-150vw);
+  -o-transform: translateX(-150vw);
+}
+
+.palm {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  width: 85vw;
+}
+
+.truck-animation {
+  animation: truck 1s ease-in-out;
+  -webkit-animation: truck 1.3s ease-in forwards;
+}
+
+@keyframes truck {
+  100% {
+    transform: translateX(25vw);
+    -webkit-transform: translateX(25vw);
+    -moz-transform: translateX(25vw);
+    -ms-transform: translateX(25vw);
+    -o-transform: translateX(25vw);
+  }
+}
+
+.h4-container {
+  justify-self: center;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.h4-container a {
+  text-align: right;
+  width: fit-content;
+  justify-self: center;
+}
+
+.introduction h4 {
+  text-align: center;
+  /* margin-left: 20vw;
+  margin-top: 20vw; */
+  color: var(--dark-brown);
+}
+
+.fa-caret-down {
+  text-align: center;
+  font-size: 30vw;
+  height: fit-content;
+  width: fit-content;
+}
+
+/* For smaller mobile devices */
+@media screen and (min-width: 300px) and (max-width: 480) {
+  .nav-bar {
+    padding-bottom: 20px;
+    padding: 2vw;
+  }
+
+  .home-introduction {
+    padding-top: 35vw;
+  }
+}
+
+/* ******************************** */
+/* SVG WAVES */
+
+/* ******************************** */
+/* MENU TEASER */
+
+.tradition-h2 {
+  color: var(--dark-brown);
+}
+
+/* MENU SECTON */
+
+.menu-teaser {
+  display: none;
+}
+
+.items {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.teaser-vegan,
+.teaser-chicken,
+.teaser-fries {
+  width: 70vw;
+}
+
+.items .teaser-chicken {
+  margin-left: 22vw;
+}
+
+.menu-home h2 {
+  color: var(--light-brown);
+  line-height: 3.5vh;
+  text-align: center;
+}
+
+.menu-home {
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/* ******************************** */
+/* EVENTS  */
+
+.events-section {
+  background-color: white;
+  flex-direction: column;
+  gap: 2vh;
+  position: relative;
+}
+
+.event-card h3 {
+  color: var(--dark-brown);
+}
+
+.event-card h4 {
+  color: var(--light-brown);
+}
+
+.underline-event {
+  width: 50vw;
+  position: absolute;
+  left: 26%;
+  top: 15%;
+}
+
+.events-section > h2 > span {
+  color: var(--light-brown);
+  font-weight: 600;
+}
+
+.events-section > div > p {
+  margin-bottom: 5vh;
+}
+
+.event-div {
+  flex-direction: column;
+  gap: 1.5vh;
+  align-content: center;
+}
+
+.event-div span {
+  line-height: 3.5vh;
+  font-size: 4vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.event-card {
+  flex-direction: row;
+  gap: 2vh;
+}
+
+.index .event-card img {
+  width: 40vw;
+  height: 40vw;
+}
+
+.container {
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.event-div p {
+  display: none;
+}
+
+/* ******************************** */
+/* FOOTER */
+
+footer {
+  background-color: var(--dark-brown);
+  position: relative;
+  width: 100%;
+  gap: 8vw;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hours"
+    "map"
+    "contact"
+    "copyright";
+}
+
+.opening-hours,
+.opening-hours div,
+address {
+  flex-direction: column;
+  gap: 2vh;
+  /* justify-content: center; */
+}
+
+#map {
+  height: 30vh;
+  width: 100%;
+}
+
+.fa-envelope,
+.fa-phone,
+.fa-facebook-f,
+.fa-instagram,
+.fa-map-pin {
+  font-size: 5vw;
+}
+
+footer h4 {
+  margin-bottom: 2vh;
+}
+
+.opening-hours {
+  grid-area: hours;
+}
+
+footer > address {
+  grid-area: contact;
+}
+
+#map {
+  grid-area: map;
+}
+
+footer h4,
+footer p,
+footer span {
+  color: white;
+}
+
+.waves-footer {
+  position: relative;
+  width: 100%;
+  margin-bottom: -7px;
+}
+
+address {
+  font-style: normal;
+}
+
+.contact-icon {
+  align-items: center;
+  gap: 2vh;
+}
+
+.menu-home {
+  position: relative;
+}
+
+.wave-transition {
+  position: relative;
+  width: 100%;
+  margin-top: -7px;
+}
+
+/************************ MENU PAGE ***************/
+
+header {
+  background-color: var(--beige);
+}
+
+.introduction2 {
+  border-radius: 0 0 65px 65px;
+  -webkit-border-radius: 0 0 65px 65px;
+  -moz-border-radius: 0 0 65px 65px;
+  -ms-border-radius: 0 0 65px 65px;
+  -o-border-radius: 0 0 65px 65px;
+  padding: 14vh 5vw 5vh;
+  background-color: var(--orange);
+}
+
+.introduction2 h1 {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.introduction2 .h1-line {
+  position: absolute;
+  left: 17%;
+  top: 19%;
+  width: 50vw;
+}
+
+.introduction2 > p:nth-child(3) {
+  margin-bottom: 1.5vh;
+}
+
+.sandwich-container article {
+  flex-direction: column;
+  gap: 1vh;
+  padding: 4vh 5vw;
+  align-content: stretch;
+  background-color: var(--cards-beige);
+  border-radius: 25px 25px 25px 25px;
+  -webkit-border-radius: 25px 25px 25px 25px;
+  -moz-border-radius: 25px 25px 25px 25px;
+  -ms-border-radius: 25px 25px 25px 25px;
+  -o-border-radius: 25px 25px 25px 25px;
+  border: 1px solid #dccfc2;
+}
+
+.menu-page {
+  flex-direction: column;
+}
+
+.sandwich-container {
+  padding: 0;
+  margin-top: 2vh;
+  gap: 4vh;
+}
+
+.sandwich-container p {
+  margin-bottom: 2vh;
+}
+
+.menu-page .h2-container p {
+  margin-bottom: 2vh;
+}
+
+.wave-transition2 {
+  position: relative;
+  width: 100%;
+  margin-bottom: -120px;
+}
+
+.rest-menu-container {
+  background-color: white;
+  gap: 4vh;
+  flex-direction: column;
+}
+
+.rest-menu-container article {
+  flex-direction: column;
+  gap: 1.5vh;
+  padding: 2vh 5vw;
+}
+
+.rest-menu-container .btn {
+  margin-top: 2vh;
+}
+
+.prices {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 2vh;
+}
+
+.circle {
+  width: 13vw;
+  height: 13vw;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background: var(--light-brown);
+}
+
+.circle p {
+  font-size: 4vw;
+  color: #fff;
+}
+
+.wolt-btn {
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.wolt-btn {
+  padding: 5vh 5vw;
+}
+
+/* ************* */
+/* About us PAGE */
+
+.our-place {
+  background-color: white;
+}
+
+.introduction3 > .h1-line {
+  margin-top: 7vh;
+  margin-left: 7vw;
+}
+
+.about-h2 {
+  margin-bottom: 4vh;
+}
+
+.desktop-about-text {
+  display: none;
+}
+
+.we-are-kulia img {
+  width: 100%;
+  height: auto;
+}
+
+.surroundings h2,
+h4 {
+  color: var(--dark-brown);
+}
+
+.surroundings > div:nth-child(2) {
+  flex-direction: column;
+  gap: 15vh;
+  justify-items: center;
+}
+
+.sourrondings-article {
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 3vh;
+}
+
+.sourrondings-article > div {
+  gap: 2vh;
+}
+
+.surroundings article {
+  flex-direction: column;
+}
+
+.surroundings-img {
+  width: 100%;
+  height: auto;
+}
+
+.event-div .surroundings-p {
+  display: block;
+}
+
+.wave-transition4 {
+  position: relative;
+  width: 100%;
+  margin-bottom: -7px;
+}
+
+.we-are-kulia,
+.our-place,
+.surroundings {
+  flex-direction: column;
+  gap: 4vw;
+}
+
+/********************* MEDIA QUERIES FOR SMALLER TABLET ********************/
+
+@media screen and (min-width: 480px) and (max-width: 650px) {
+  h1,
+  h1 span {
+    font-size: 7vw;
+  }
+
+  .introduction h1 {
+    font-size: 8vw;
+  }
+
+  .introduction h1 span {
+    font-size: 9vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  h4 {
+    font-size: 3.5vw;
+  }
+
+  h5 {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 2.3vw;
+  }
+
+  li {
+    font-size: 2.3vw;
+  }
+
+  /* sections paddings */
+  section,
+  footer {
+    padding: 5vw;
+  }
+
+  /* ******************************** */
+  /* FUNCTIONAL CLASSES */
+
+  .btn {
+    padding: 2vw 4vw;
+    font-size: 3.5vw;
+  }
+
+  .underline {
+    width: 42vw;
+    margin-left: 25vw;
+    margin-bottom: 1vh;
+  }
+
+  .fa-caret-down {
+    font-size: 20vw;
+  }
+
+  .nav-bar,
+  .desktop-nav {
+    padding: 2vw;
+  }
+
+  /* nav */
+  /* Navigation */
+  .mobile-nav {
+    padding-top: 13vw;
+    row-gap: 8vw;
+    justify-content: space-around;
+  }
+
+  #mobile {
+    font-size: 5vw;
+  }
+
+  .kulia-logo-mobile {
+    width: 10vw;
+  }
+
+  /* List item on the navigaton */
+  .mobile-nav > div {
+    row-gap: 6vw;
+  }
+
+  .mobile-nav > div > a {
+    font-size: 7vw;
+  }
+
+  .menu-social {
+    column-gap: 7vw;
+  }
+
+  .menu-social > a {
+    padding: 3vw 0;
+  }
+
+  .menu-social > a > i {
+    font-size: 6vw;
+  }
+
+  .menu-social-h2 {
+    font-size: 4vw;
+  }
+
+  .h1-container {
+    align-self: flex-end;
+  }
+
+  .h4-container {
+    align-self: center;
+  }
+
+  @keyframes truck {
+    100% {
+      transform: translateX(15vw);
+      -webkit-transform: translateX(15vw);
+      -moz-transform: translateX(15vw);
+      -ms-transform: translateX(15vw);
+      -o-transform: translateX(15vw);
+    }
+  }
+
+  .introduction h4 > br {
+    display: none;
+  }
+
+  /******** MENU SECTON **********/
+
+  .items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .menu-teaser {
+    display: block;
+  }
+
+  .teaser-vegan,
+  .teaser-chicken,
+  .teaser-fries {
+    width: 27vw;
+  }
+
+  .items a {
+    text-align: center;
+  }
+
+  .items .teaser-chicken {
+    margin-left: 0;
+  }
+
+  .menu-home h2 {
+    line-height: 4.5vw;
+  }
+
+  .menu-home {
+    gap: 3vh;
+  }
+
+  .menu-home h4 {
+    padding-top: 4vw;
+  }
+
+  /* ******************************** */
+  /* EVENTS  */
+
+  .event-div {
+    padding: 1.5vw 2vw;
+  }
+
+  .event-div span {
+    font-size: 2.5vw;
+  }
+
+  .index .event-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .events-section .event-card {
+    flex-direction: column;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 40vw;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* ******************************** */
+  /* FOOTER */
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hours contact"
+      "map map";
+  }
+
+  .opening-hours {
+    grid-area: hours;
+  }
+
+  footer > address {
+    grid-area: contact;
+    justify-self: right;
+  }
+
+  #map {
+    grid-area: map;
+  }
+
+  .opening-hours,
+  .opening-hours div,
+  address {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .fa-envelope,
+  .fa-phone,
+  .fa-facebook-f,
+  .fa-instagram,
+  .fa-map-pin {
+    font-size: 2.5vw;
+  }
+
+  footer h4 {
+    margin-bottom: 3vh;
+  }
+
+  #map {
+    height: 40vh;
+    width: 100%;
+  }
+
+  /************************ MENU PAGE ***************/
+  .introduction2 {
+    padding: 12vh 4vw 4vh;
+  }
+
+  .introduction2 h1 {
+    margin-bottom: 0.5vh;
+  }
+
+  .introduction2 .h1-line {
+    top: 10%;
+  }
+
+  .sandwich-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rest-menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3vw;
+    /* width: fit-content; */
+    justify-content: center;
+  }
+
+  .rest-menu-container article {
+    width: 100%;
+    flex-direction: column;
+    padding: 3vh 2vw;
+    gap: 2vh;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 25px 25px 25px 25px;
+  }
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 8vw;
+    line-height: 40px;
+  }
+
+  .circle p {
+    font-size: 3vw;
+  }
+
+  /* About us PAGE */
+
+  .we-are-kulia,
+  .our-place {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .surroundings > div:nth-child(2) {
+    flex-direction: row;
+    gap: 5vh;
+    align-content: start;
+  }
+
+  .event-card {
+    width: 70vw;
+    background-color: white;
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 14%);
+  }
+
+  .introduction3 {
+    padding-top: 15vh;
+  }
+
+  .introduction3 > .h1-line {
+    margin-left: 9vw;
+  }
+
+  .desktop-about-text {
+    display: block;
+  }
+
+  .we-are-kulia img {
+    width: 100%;
+    height: auto;
+  }
+
+  .event-div p {
+    display: block;
+  }
+
+  .about-h2 {
+    margin-bottom: 2vh;
+  }
+
+  .surroundings > div:nth-child(2) {
+    gap: 5vw;
+  }
+
+  .we-are-kulia > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto 7vw;
+    column-gap: 4vw;
+  }
+}
+
+/*********** MEDIA QUERIES FOR BIGGER TABLET***********/
+
+@media screen and (min-width: 650px) and (max-width: 1080px) {
+  h1 {
+    font-size: 4.5vw;
+  }
+
+  h1 span {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 3.5vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  h4 {
+    font-size: 2.2vw;
+  }
+
+  h5 {
+    font-size: 2vw;
+  }
+
+  p {
+    font-size: 1.8vw;
+  }
+
+  /* sections paddings */
+  section,
+  footer {
+    padding: 3vh 3vw;
+  }
+
+  /* ******************************** */
+  /* FUNCTIONAL CLASSES */
+
+  .btn {
+    padding: 1vw 3vw;
+    font-size: 2.5vw;
+  }
+
+  .underline {
+    width: 42vw;
+    margin-left: 25vw;
+    margin-bottom: 1vh;
+  }
+
+  .fa-caret-down {
+    font-size: 10vw;
+  }
+
+  .nav-bar,
+  .desktop-nav {
+    padding: 1.5vw;
+  }
+
+  /* nav */
+  /* Navigation */
+  .mobile-nav {
+    padding-top: 13vw;
+    row-gap: 5vw;
+    justify-content: space-around;
+  }
+
+  #mobile {
+    font-size: 4vw;
+  }
+
+  .kulia-logo-mobile {
+    width: 8vw;
+  }
+
+  /* List item on the navigaton */
+  .mobile-nav > div {
+    row-gap: 5vw;
+  }
+
+  .mobile-nav > div > a {
+    font-size: 5.5vw;
+  }
+
+  .menu-social {
+    column-gap: 7vw;
+  }
+
+  .menu-social > a {
+    padding: 2vw 0;
+  }
+
+  .menu-social > a > i {
+    font-size: 4.5vw;
+  }
+
+  .menu-social-h2 {
+    font-size: 3vw;
+  }
+
+  .home-introduction {
+    row-gap: 0;
+    padding-top: 10vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    /* padding-top: 25vh; */
+  }
+
+  .introduction {
+    height: 80vh;
+  }
+
+  .h1-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: flex-start;
+  }
+
+  .truck-palm-container {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .h4-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    justify-self: flex-start;
+  }
+
+  .palm {
+    width: 40vw;
+  }
+
+  .truck {
+    width: 30vw;
+  }
+
+  @keyframes truck {
+    100% {
+      transform: translateX(10vw);
+      -webkit-transform: translateX(10vw);
+      -moz-transform: translateX(10vw);
+      -ms-transform: translateX(10vw);
+      -o-transform: translateX(10vw);
+    }
+  }
+
+  .introduction h4 > br {
+    display: none;
+  }
+
+  /******** MENU SECTON **********/
+
+  .items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .menu-teaser {
+    display: block;
+  }
+
+  .teaser-vegan,
+  .teaser-chicken,
+  .teaser-fries {
+    width: 27vw;
+  }
+
+  .items a {
+    text-align: center;
+  }
+
+  .items .teaser-chicken {
+    margin-left: 0;
+  }
+
+  .menu-home h2 {
+    line-height: 4vw;
+  }
+
+  .menu-home {
+    gap: 3vh;
+  }
+
+  .menu-home h4 {
+    padding-top: 4vw;
+  }
+
+  /* ******************************** */
+  /* EVENTS  */
+
+  .event-div {
+    padding: 1.5vw 1vw;
+  }
+
+  .event-div span {
+    line-height: 3.5vh;
+    font-size: 2.5vw;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .index .event-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .events-section .event-card {
+    flex-direction: column;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 35vw;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* ******************************** */
+  /* FOOTER */
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hours contact"
+      "map map";
+    gap: 3vw;
+    padding: 2vh 5vw;
+  }
+
+  .opening-hours {
+    grid-area: hours;
+  }
+
+  footer > address {
+    grid-area: contact;
+    justify-self: right;
+  }
+
+  #map {
+    grid-area: map;
+  }
+
+  footer span {
+    grid-area: copyright;
+    grid-column-start: 1;
+  }
+
+  .opening-hours,
+  address {
+    gap: 2vh;
+  }
+
+  .fa-envelope,
+  .fa-phone,
+  .fa-facebook-f,
+  .fa-instagram,
+  .fa-map-pin {
+    font-size: 2.5vw;
+  }
+
+  footer h4 {
+    margin-bottom: 2vh;
+  }
+
+  #map {
+    height: 40vh;
+    width: 100%;
+    align-self: flex-end;
+  }
+
+  /************************ MENU PAGE ************************/
+  .introduction2 {
+    padding: 12vh 4vw 4vh;
+  }
+
+  .introduction2 h1 {
+    margin-bottom: 0.5vh;
+  }
+
+  .introduction2 .h1-line {
+    top: 10%;
+  }
+
+  .sandwich-container {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+  }
+
+  .sandwich-container li,
+  .rest-menu-container li {
+    font-size: 1.8vw;
+  }
+
+  .rest-menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+  }
+
+  .rest-menu-container article {
+    width: 100%;
+    flex-direction: column;
+    padding: 3vh 2vw;
+    gap: 2vh;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 25px 25px 25px 25px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -ms-border-radius: 25px 25px 25px 25px;
+    -o-border-radius: 25px 25px 25px 25px;
+  }
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: 5vw;
+    line-height: 40px;
+  }
+
+  .circle p {
+    font-size: 2vw;
+  }
+
+  /* About us PAGE */
+
+  .we-are-kulia,
+  .our-place {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .surroundings > div:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* .surroundings .flex {
+    align-items: center;
+  } */
+
+  .event-card {
+    width: 70vw;
+    background-color: white;
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 14%);
+  }
+
+  .introduction3 {
+    padding-top: 15vh;
+  }
+
+  .introduction3 > .h1-line {
+    margin-left: 9vw;
+  }
+
+  .desktop-about-text {
+    display: block;
+  }
+
+  .we-are-kulia,
+  .our-place,
+  .surroundings {
+    padding: 8vw;
+  }
+
+  .we-are-kulia > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto 7vw;
+    column-gap: 4vw;
+  }
+
+  .we-are-kulia img {
+    width: 100%;
+    height: auto;
+  }
+
+  .event-div p {
+    display: block;
+  }
+
+  .about-h2 {
+    margin-bottom: 2vh;
+  }
+
+  .surroundings > div:nth-child(2) {
+    gap: 5vw;
+  }
+}
+
+/* MEDIA QUERIES FOR DESKTOP */
+
+@media screen and (min-width: 1080px) {
+  /* font sizes */
+  h1, h1 span {
+    font-size: 3.5vw;
+  }
+
+  .introduction h1 span {
+    font-size: 4.5vw;
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 2vw;
+  }
+
+  h4 {
+    font-size: 1.5vw;
+  }
+
+  h5 {
+    font-size: 1.2vw;
+  }
+
+  p {
+    font-size: 1vw;
+  }
+
+  .btn {
+    padding: 1vw 1.5vw;
+    font-size: 1.5vw;
+  }
+
+  /* NAV */
+
+  .kulia-logo {
+    width: 4vw;
+    padding-left: 0.5vw;
+  }
+
+  .desktop-about-text,
+  .desktop-nav {
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .mobile-nav,
+  .nav-bar {
+    display: none;
+  }
+
+  .desktop-nav {
+    padding: 0.7vw;
+    align-self: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+    background-color: transparent;
+  }
+
+  .nav-white {
+    color: var(--dark-brown);
+    font-weight: 600;
+    font-size: 1vw;
+  }
+
+  .nav-transition {
+    animation: backroundColor 1s ease-in forwards;
+    -webkit-animation: backroundColor 1s ease-in forwards;
+  }
+
+  @keyframes backroundColor {
+    100% {
+      background-color: var(--dark-brown);
+    }
+  }
+
+  .white {
+    animation: color 0.7s ease-in forwards;
+    z-index: 150;
+    -webkit-animation: color 1s ease-in forwards;
+  }
+
+  @keyframes color {
+    100% {
+      color: white;
+    }
+  }
+
+  .desktop-nav ul {
+    gap: 3vw;
+    flex-direction: row;
+  }
+
+  .desktop-nav .nav-social .fa-brands {
+    font-size: 1vw;
+    font-weight: 100;
+    color: var(--dark-brown);
+    margin-right: 1vw;
+  }
+
+  /* hero img */
+  .hero-img {
+    background-image: url(../svg/hero-imgtesr.svg);
+    background-size: cover;
+    width: 100%;
+    height: 140vh;
+  }
+
+  .header-teaser {
+    font-size: 1.3vw;
+    display: block;
+    color: var(--dark-brown);
+  }
+
+  .header-teaser span {
+    color: var(--beige);
+  }
+
+  .home-introduction {
+    row-gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    /* padding-top: 25vh; */
+  }
+
+  .h1-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: flex-start;
+  }
+
+  .introduction h1 {
+    padding-top: 15vw;
+  }
+
+  .truck-palm-container {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-self: center;
+    margin-bottom: 5vw;
+  }
+
+  .h4-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    justify-self: flex-start;
+  }
+
+  .truck {
+    width: 27vw;
+  }
+
+  .palm {
+    width: 36vw;
+  }
+
+  .truck-animation {
+    animation: truck 1s ease-out forwards;
+    -webkit-animation: truck 1s ease-out forwards;
+}
+
+  @keyframes truck {
+    100% {
+      transform: translateX(6vw);
+      -webkit-transform: translateX(6vw);
+      -moz-transform: translateX(6vw);
+      -ms-transform: translateX(6vw);
+      -o-transform: translateX(6vw);
+    }
+  }
+
+  .introduction h4 > br {
+    display: none;
+  }
+
+  .fa-caret-down {
+    font-size: 8vw;
+  }
+
+  /* ******************************** */
+  /* MENU TEASER */
+
+  .menu-teaser {
+    display: block;
+    margin: 0 15vw;
+  }
+
+  .items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2vw;
+  }
+
+  .teaser-vegan,
+  .teaser-chicken,
+  .teaser-fries {
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  .items .teaser-chicken {
+    margin-left: 0;
+  }
+
+  .items a {
+    text-align: center;
+  }
+
+  .menu-home h2 {
+    color: var(--light-brown);
+    line-height: 3vw;
+    text-align: center;
+  }
+
+  .menu-home {
+    gap: 2.5vw;
+  }
+
+  /* ******************************** */
+  /* EVENTS  */
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .index .event-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .event-card {
+    flex-direction: column;
+    width: 19vw;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.144);
+    background-color: white;
+  }
+
+  .event-div span {
+    font-size: 1vw;
+  }
+
+  .event-div {
+    gap: 1vh;
+    padding: 1vw;
+  }
+
+  .event-div p {
+    display: block;
+    font-size: 0.8vw;
+  }
+
+  /* ******************************** */
+  /* FOOTER */
+
+  footer {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3vw;
+    grid-template-areas: "hours map contact";
+  }
+
+  .opening-hours {
+    align-content: left;
+  }
+
+  .opening-hours {
+    justify-self: center;
+  }
+
+  .opening-hours div,
+  address {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .fa-envelope,
+  .fa-phone,
+  .fa-facebook-f,
+  .fa-instagram,
+  .fa-map-pin {
+    font-size: 1.5vw;
+  }
+
+  footer h4 {
+    margin-bottom: 2vh;
+  }
+
+  .menu-home {
+    position: relative;
+  }
+
+  .wave-transition {
+    position: relative;
+    width: 100%;
+    margin-top: -7px;
+  }
+
+  /* ******************************** */
+  /************************ MENU PAGE ***************/
+  .introduction2 h1 {
+    margin-bottom: 0;
+  }
+
+  .underline {
+    width: 25vw;
+    margin-left: 35vw;
+    /* margin-bottom: 1vh; */
+  }
+
+  .sandwich-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2vw;
+    padding: 0;
+    align-self: center;
+  }
+
+  .sandwich-container p,
+  li {
+    font-size: 0.8vw;
+    line-height: 2.2vh;
+  }
+
+  .sandwich-container article {
+    flex-direction: column;
+    padding: 2vw;
+    width: 22vw;
+    gap: 1vh;
+  }
+
+  .sandwich-container img,
+  .rest-menu-container img {
+    width: 15vw;
+  }
+
+  .rest-menu-container {
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: center;
+  }
+
+  .rest-menu-container article {
+    width: 20vw;
+    padding: 3vh 2vw;
+    gap: 2vh;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 25px 25px 25px 25px;
+  }
+
+  .menu-page p {
+    margin-bottom: 3vh;
+  }
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .circle p {
+    font-size: 1vw;
+  }
+
+  .prices {
+    margin-bottom: 4vh;
+  }
+
+  /* ******************************** */
+  /* About us PAGE */
+
+  .introduction3 {
+    padding: 14vh 5vw 5vh;
+  }
+
+  .desktop-about-text {
+    display: block;
+  }
+
+  .we-are-kulia {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .we-are-kulia > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto 7vw;
+    column-gap: 4vw;
+  }
+
+  .we-are-kulia img {
+    width: 100%;
+    height: auto;
+  }
+
+  .we-are-kulia p {
+    margin: 1vh 5vw 3vh 0;
+  }
+
+  .sourrondings-article {
+    margin: 3vw;
+    flex-direction: column;
+    border: 1px solid #dccfc2;
+  }
+
+  .surroundings img {
+    height: auto;
+    width: 100%;
+  }
+
+  .surroundings-p {
+    display: block;
+    margin-top: 2vw;
+  }
+
+  .surroundings > div:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sourrondings-article div {
+    padding: 2vw;
+  }
+}
